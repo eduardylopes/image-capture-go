@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	handler "github.com/eduardylopes/image-generator-go/api"
+	handler "github.com/eduardylopes/image-capture-go/api"
 )
 
 func main() {
