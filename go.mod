@@ -1,4 +1,4 @@
-module github.com/eduardylopes/image-generator-go
+module github.com/eduardylopes/image-capture-go
 
 go 1.20
 
