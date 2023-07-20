@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/generate-image", handler.Handler)
+	http.HandleFunc("/capture", handler.Handler)
 
 	port := "8080"
 	fmt.Printf("Server listening on http://localhost:%s\n", port)
