@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/eduardylopes/image-generator-go/screenshot"
+	"github.com/eduardylopes/image-capture-go/screenshot"
 )
 
 func Handler(w http.ResponseWriter, r *http.Request) {
