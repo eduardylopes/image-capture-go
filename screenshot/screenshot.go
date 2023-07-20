@@ -12,16 +12,16 @@ func GetScreenshot(url, elementID string) []byte {
 	defer cancel()
 
 	if err := chromedp.Run(ctx, chromedp.Navigate(url)); err != nil {
-		log.Fatal("Failed to navigate to the URL: ", url)
+		log.Fatal(err)
 	}
 
 	if err := chromedp.Run(ctx, chromedp.WaitVisible("#"+elementID, chromedp.ByID)); err != nil {
-		log.Fatal("Failed to wait for the element to be visible: ", err)
+		log.Fatal(err)
 	}
 
 	var buf []byte
 	if err := chromedp.Run(ctx, chromedp.Screenshot("#"+elementID, &buf, chromedp.ByID)); err != nil {
-		log.Fatal("Failed to capture the screenshot: ", err)
+		log.Fatal(err)
 	}
 
 	return buf
